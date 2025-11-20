@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head', { pageTitle: 'Error del servidor' }) %>
+  <body>
+    <%- include('./partials/header') %>
+    <main class="page shell">
+      <section class="section">
+        <p class="eyebrow">Ups, algo salió mal</p>
+        <h1><%= message %></h1>
+        <p>Estado: <%= error.status || 500 %></p>
+        <% if (error.stack) { %>
+        <pre class="stacktrace"><%= error.stack %></pre>
+        <% } %>
+        <a class="btn primary" href="/">Volver al inicio</a>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>

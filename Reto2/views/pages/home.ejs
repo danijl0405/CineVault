@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head', { pageTitle }) %>
+  <body>
+    <%- include('../partials/header') %>
+    <main class="page home">
+      <section class="hero hero--gradient">
+        <div class="shell hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow"><%= intro.eyebrow %></p>
+            <h1><%= intro.headline %></h1>
+            <p class="lead"><%= intro.copy %></p>
+            <div class="hero-actions">
+              <a class="btn primary" href="<%= intro.ctaPrimary.href %>"
+                ><%= intro.ctaPrimary.label %></a
+              >
+              <a class="btn outline" href="<%= intro.ctaSecondary.href %>"
+                ><%= intro.ctaSecondary.label %></a
+              >
+            </div>
+            <div class="hero__metrics">
+              <% metrics.forEach(function(metric){ %>
+              <article>
+                <p class="metric-value"><%= metric.value %></p>
+                <p class="metric-label"><%= metric.label %></p>
+                <small><%= metric.detail %></small>
+              </article>
+              <% }) %>
+            </div>
+          </div>
+          <div class="hero__panel">
+            <p class="panel-title">Actividad reciente</p>
+            <ul class="timeline">
+              <% recentMovies.forEach(function(movie){ %>
+              <li>
+                <div>
+                  <strong><%= movie.title %></strong>
+                  <span><%= movie.owner %> · <%= movie.format %></span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="tag"><%= movie.status %></span>
+                  <small><%= movie.addedAt %></small>
+                </div>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell section--center">
+        <header class="section-header">
+          <p class="eyebrow">Componentes clave</p>
+          <h2>Lo esencial para coleccionistas reales</h2>
+          <p>
+            Estas tarjetas resumen las funciones que usamos a diario en nuestros cineclubes:
+            control de inventario, préstamos claros y una búsqueda que entiende cómo pensamos nuestras colecciones.
+          </p>
+        </header>
+        <div class="cards-grid">
+          <% featureHighlights.forEach(function(feature){ %>
+          <article class="card card--feature">
+            <div class="feature-icon"><%= feature.icon %></div>
+            <h3><%= feature.title %></h3>
+            <p><%= feature.description %></p>
+          </article>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="section shell split section--center">
+        <div class="split__copy">
+          <p class="eyebrow">Historias de usuario</p>
+          <h2>Personas primero, colecciones después</h2>
+          <p>
+            Cada mejora sale de conversaciones con programadores de festivales, familias cinéfilas y videoclubes independientes.
+          </p>
+          <ul>
+            <li>Registro de préstamos por persona, con notas sobre estado físico.</li>
+            <li>Alertas suaves para recordar devoluciones o copias pendientes de catalogar.</li>
+            <li>Listas compartidas para elegir la programación del fin de semana.</li>
+          </ul>
+        </div>
+        <div class="split__card">
+          <p class="panel-title">Películas destacadas</p>
+          <% recentMovies.slice(0,3).forEach(function(movie){ %>
+          <article>
+            <strong><%= movie.title %></strong>
+            <span><%= movie.owner %> · <%= movie.format %></span>
+            <small><%= movie.addedAt %></small>
+          </article>
+          <% }) %>
+          <a class="btn ghost" href="/login">Ver todas</a>
+        </div>
+      </section>
+
+      <section class="section shell section--center">
+        <header class="section-header">
+          <p class="eyebrow">Catálogo vivo</p>
+          <h2>Registra altas y movimientos en minutos</h2>
+        </header>
+        <div class="movies-table">
+          <div class="movies-table__head">
+            <span>Título</span>
+            <span>Propietario/a</span>
+            <span>Formato</span>
+            <span>Estatus</span>
+            <span>Alta</span>
+          </div>
+          <% recentMovies.forEach(function(movie){ %>
+          <div class="movies-table__row">
+            <span><strong><%= movie.title %></strong></span>
+            <span><%= movie.owner %></span>
+            <span><%= movie.format %></span>
+            <span><span class="tag"><%= movie.status %></span></span>
+            <span><%= movie.addedAt %></span>
+          </div>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="section highlight shell">
+        <div>
+          <p class="eyebrow">Comparte tu videoteca</p>
+          <h2>Enséñanos cómo cuidas tus películas</h2>
+          <p>
+            Agendamos sesiones rápidas para conocer tu colección, ayudarte a importar datos y adaptar la herramienta a tu forma de trabajar.
+          </p>
+        </div>
+        <a class="btn primary" href="/contacto">Escribir al equipo</a>
+      </section>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head', { pageTitle }) %>
+  <body>
+    <%- include('../partials/header') %>
+    <main class="page contact shell">
+      <section class="section contact-hero contact-hero--grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Estamos para ayudarte</p>
+          <h1><%= pageTitle %></h1>
+          <p class="lead"><%= helperText %></p>
+          <div class="contact-tags">
+            <span class="tag">Soporte prioritario</span>
+            <span class="tag">Documentación guiada</span>
+            <span class="tag">Feedback continuo</span>
+          </div>
+        </div>
+        <div class="contact-channels">
+          <% contactChannels.forEach(function(channel){ %>
+          <article>
+            <p class="channel-label"><%= channel.label %></p>
+            <p class="channel-value"><%= channel.value %></p>
+            <small><%= channel.hint %></small>
+          </article>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="section contact-form">
+        <form class="form-card form-card--wide" aria-label="Formulario de contacto">
+          <div class="form-row">
+            <label for="name">Nombre completo</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
+          </div>
+
+          <div class="form-row full">
+            <label for="message">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Cuéntanos cómo podemos ayudarte"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn primary full">Enviar mensaje</button>
+          <p class="form-hint">
+            Este envío es simulado y no almacenará datos. Añadiremos la lógica real en la integración con el backend.
+          </p>
+        </form>
+      </section>
+
+      <section class="section shell faq">
+        <header>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Información rápida antes de escribirnos</h2>
+        </header>
+        <div class="accordion">
+          <% faqs.forEach(function(item, index){ %>
+          <article>
+            <details <%= index === 0 ? 'open' : '' %>>
+              <summary><%= item.question %></summary>
+              <p><%= item.answer %></p>
+            </details>
+          </article>
+          <% }) %>
+        </div>
+      </section>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
+
+
