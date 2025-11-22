@@ -346,6 +346,86 @@ a {
   overflow: hidden;
 }
 
+/* Movies grid: tarjeta estilo cartelera */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.movie-card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.movie-poster {
+  height: 220px;
+  background: linear-gradient(180deg, rgba(20,26,40,0.6), rgba(10,12,16,0.6)),
+    linear-gradient(120deg, rgba(255,123,84,0.06), rgba(68,97,255,0.04));
+  background-size: cover;
+  position: relative;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-badges {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.badge.format {
+  background: rgba(0,0,0,0.6);
+  color: var(--text);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.movie-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1 1 auto;
+}
+
+.movie-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.movie-sub {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.movie-meta {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+.movie-date {
+  color: var(--text-soft);
+}
+
 .movies-table__head,
 .movies-table__row {
   display: grid;

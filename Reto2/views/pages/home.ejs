@@ -99,22 +99,24 @@
           <p class="eyebrow">Catálogo vivo</p>
           <h2>Registra altas y movimientos en minutos</h2>
         </header>
-        <div class="movies-table">
-          <div class="movies-table__head">
-            <span>Título</span>
-            <span>Propietario/a</span>
-            <span>Formato</span>
-            <span>Estatus</span>
-            <span>Alta</span>
-          </div>
+
+        <div class="movies-grid">
           <% recentMovies.forEach(function(movie){ %>
-          <div class="movies-table__row">
-            <span><strong><%= movie.title %></strong></span>
-            <span><%= movie.owner %></span>
-            <span><%= movie.format %></span>
-            <span><span class="tag"><%= movie.status %></span></span>
-            <span><%= movie.addedAt %></span>
-          </div>
+          <article class="movie-card">
+            <div class="movie-poster">
+              <img src="<%= movie.poster %>" alt="Poster de <%= movie.title %>">
+              <div class="movie-badges">
+                <span class="badge format"><%= movie.format %></span>
+              </div>
+            </div>
+            <div class="movie-body">
+              <h3 class="movie-title"><%= movie.title %></h3>
+              <p class="movie-sub"> <%= movie.owner %> · <small class="movie-date"><%= movie.addedAt %></small></p>
+              <div class="movie-meta">
+                <span class="tag"><%= movie.status %></span>
+              </div>
+            </div>
+          </article>
           <% }) %>
         </div>
       </section>
