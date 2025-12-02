@@ -1,0 +1,227 @@
+[
+    {
+        "id": 1,
+        "title": "Interstellar",
+        "genre": "Ciencia Ficción",
+        "year": 2014,
+        "description": "Un grupo de exploradores espaciales viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad. Una épica aventura sobre el tiempo, el espacio y el amor.",
+        "director": "Christopher Nolan",
+        "poster": "/images/intellestelar.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Gladiator",
+        "genre": "Acción, Drama",
+        "year": 2000,
+        "description": "Un general romano traicionado busca venganza como gladiador en el Coliseo. Una historia épica de honor, lealtad y redención en la antigua Roma.",
+        "director": "Ridley Scott",
+        "poster": "/images/gladiator.jpg"
+    },
+    {
+        "id": 3,
+        "title": "El Padrino",
+        "genre": "Drama, Crimen",
+        "year": 1972,
+        "description": "La saga de la familia Corleone y su imperio criminal en Nueva York. Considerada una de las mejores películas de la historia del cine.",
+        "director": "Francis Ford Coppola",
+        "poster": "/images/padrino.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Parasite",
+        "genre": "Thriller, Drama",
+        "year": 2019,
+        "description": "Una familia pobre se infiltra en la vida de una familia rica con consecuencias inesperadas. Ganadora del Oscar a Mejor Película.",
+        "director": "Bong Joon-ho",
+        "poster": "/images/parasite.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Matrix",
+        "genre": "Ciencia Ficción, Acción",
+        "year": 1999,
+        "description": "Un hacker descubre que la realidad es una simulación creada por máquinas. Una revolucionaria película que cambió el cine de acción.",
+        "director": "Lana y Lilly Wachowski",
+        "poster": "/images/matrix.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Inception",
+        "genre": "Ciencia Ficción, Thriller",
+        "year": 2010,
+        "description": "Un ladrón especializado en robar secretos del subconsciente debe realizar el trabajo inverso: plantar una idea. Un viaje alucinante por los sueños.",
+        "director": "Christopher Nolan",
+        "poster": "/images/inception.jpg"
+    },
+    {
+        "id": 7,
+        "title": "El Laberinto del Fauno",
+        "genre": "Fantasía, Drama",
+        "year": 2006,
+        "description": "Una niña descubre un mundo mágico durante la Guerra Civil Española. Una obra maestra del cine fantástico con profundas raíces en la realidad.",
+        "director": "Guillermo del Toro",
+        "poster": "/images/laberinto.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Pulp Fiction",
+        "genre": "Crimen, Drama",
+        "year": 1994,
+        "description": "Historias entrelazadas del mundo criminal de Los Ángeles contadas de forma no lineal. Una obra maestra de Tarantino.",
+        "director": "Quentin Tarantino",
+        "poster": "/images/pulp_fiction.jpg"
+    },
+    {
+        "id": 9,
+        "title": "El Señor de los Anillos: La Comunidad del Anillo",
+        "genre": "Fantasía, Aventura",
+        "year": 2001,
+        "description": "Un hobbit emprende un viaje épico para destruir un anillo mágico que amenaza con sumir al mundo en la oscuridad.",
+        "director": "Peter Jackson",
+        "poster": "/images/lotr1.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Forrest Gump",
+        "genre": "Drama, Romance",
+        "year": 1994,
+        "description": "La extraordinaria vida de un hombre con un coeficiente intelectual bajo que presencia y participa en eventos históricos de Estados Unidos.",
+        "director": "Robert Zemeckis",
+        "poster": "/images/forrest-gump.jpg"
+    },
+    {
+        "id": 11,
+        "title": "El Caballero Oscuro",
+        "genre": "Acción, Crimen",
+        "year": 2008,
+        "description": "Batman enfrenta al Joker, un criminal caótico que quiere sumir a Gotham en la anarquía. Una redefinición del género de superhéroes.",
+        "director": "Christopher Nolan",
+        "poster": "/images/el-caballero-oscuro.jpg"
+    },
+    {
+        "id": 12,
+        "title": "La Lista de Schindler",
+        "genre": "Drama, Historia",
+        "year": 1993,
+        "description": "La historia real de Oskar Schindler, un empresario que salvó a más de mil judíos durante el Holocausto.",
+        "director": "Steven Spielberg",
+        "poster": "/images/schindler.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Blade Runner 2049",
+        "genre": "Ciencia Ficción, Thriller",
+        "year": 2017,
+        "description": "Un blade runner descubre un secreto que podría cambiar el futuro de la humanidad. Secuela visualmente impresionante del clásico de 1982.",
+        "director": "Denis Villeneuve",
+        "poster": "/images/bladerunner2049.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Amélie",
+        "genre": "Romance, Comedia",
+        "year": 2001,
+        "description": "Una joven parisina decide cambiar la vida de quienes la rodean mientras lidia con su propia soledad. Una película encantadora y visualmente única.",
+        "director": "Jean-Pierre Jeunet",
+        "poster": "/images/amelie.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Oldboy",
+        "genre": "Thriller, Misterio",
+        "year": 2003,
+        "description": "Un hombre es secuestrado y encerrado durante 15 años sin explicación. Al ser liberado, busca venganza y respuestas.",
+        "director": "Park Chan-wook",
+        "poster": "/images/oldboy.jpg"
+    },
+    {
+        "id": 16,
+        "title": "El Resplandor",
+        "genre": "Terror, Thriller",
+        "year": 1980,
+        "description": "Un escritor acepta un trabajo como cuidador de un hotel aislado durante el invierno, donde fuerzas sobrenaturales lo empujan a la locura.",
+        "director": "Stanley Kubrick",
+        "poster": "/images/shining.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Whiplash",
+        "genre": "Drama, Música",
+        "year": 2014,
+        "description": "Un joven baterista de jazz enfrenta a un instructor abusivo en su búsqueda de la grandeza musical. Intenso y emocionante.",
+        "director": "Damien Chazelle",
+        "poster": "/images/whiplash.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Ciudadano Kane",
+        "genre": "Drama, Misterio",
+        "year": 1941,
+        "description": "Un periodista investiga el significado de la última palabra pronunciada por un magnate de los medios. Considerada una de las mejores películas jamás hechas.",
+        "director": "Orson Welles",
+        "poster": "/images/citizenkane.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Mad Max: Furia en la Carretera",
+        "genre": "Acción, Aventura",
+        "year": 2015,
+        "description": "En un futuro post-apocalíptico, una mujer se rebela contra un tirano en una guerra por la supervivencia. Acción frenética de principio a fin.",
+        "director": "George Miller",
+        "poster": "/images/madmax.jpg"
+    },
+    {
+        "id": 20,
+        "title": "Spirited Away (El Viaje de Chihiro)",
+        "genre": "Animación, Fantasía",
+        "year": 2001,
+        "description": "Una niña debe trabajar en una casa de baños para espíritus para salvar a sus padres. Una obra maestra de la animación japonesa.",
+        "director": "Hayao Miyazaki",
+        "poster": "/images/spiritedaway.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Casablanca",
+        "genre": "Romance, Drama",
+        "year": 1942,
+        "description": "Durante la Segunda Guerra Mundial, un expatriado americano debe elegir entre su amor y ayudar a su antigua amante a escapar de los nazis.",
+        "director": "Michael Curtiz",
+        "poster": "/images/casablanca.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Taxi Driver",
+        "genre": "Drama, Thriller",
+        "year": 1976,
+        "description": "Un veterano de Vietnam con insomnio trabaja como taxista nocturno en Nueva York, mientras su salud mental se deteriora.",
+        "director": "Martin Scorsese",
+        "poster": "/images/taxidriver.jpg"
+    },
+    {
+        "id": 23,
+        "title": "La La Land",
+        "genre": "Musical, Romance",
+        "year": 2016,
+        "description": "Una actriz aspirante y un músico de jazz se enamoran mientras persiguen sus sueños en Los Ángeles. Un homenaje a los musicales clásicos.",
+        "director": "Damien Chazelle",
+        "poster": "/images/lalaland.jpg"
+    },
+    {
+        "id": 24,
+        "title": "Volver al Futuro",
+        "genre": "Ciencia Ficción, Aventura",
+        "year": 1985,
+        "description": "Un adolescente viaja accidentalmente al pasado en una máquina del tiempo y debe asegurarse de que sus padres se enamoren.",
+        "director": "Robert Zemeckis",
+        "poster": "/images/backtothefuture.jpg"
+    },
+    {
+        "id": 25,
+        "title": "Requiem por un Sueño",
+        "genre": "Drama, Thriller",
+        "year": 2000,
+        "description": "Cuatro personas persiguen sus sueños mientras caen en la adicción. Una película devastadora sobre las drogas y la obsesión.",
+        "director": "Darren Aronofsky",
+        "poster": "/images/requiem.jpg"
+    }
+]

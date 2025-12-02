@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head', { pageTitle }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="page movie-detail shell">
+                <section class="section movie-hero">
+                    <div class="movie-hero-content">
+                        <div class="movie-poster-large">
+                            <img src="<%= movie.poster %>" alt="Póster de <%= movie.title %>" />
+                        </div>
+                        <div class="movie-details">
+                            <p class="eyebrow">
+                                <%= movie.genre %>
+                            </p>
+                            <h1>
+                                <%= movie.title %>
+                            </h1>
+                            <div class="movie-meta-info">
+                                <span class="meta-item">
+                                    <strong>Año:</strong>
+                                    <%= movie.year %>
+                                </span>
+                                <span class="separator">•</span>
+                                <span class="meta-item">
+                                    <strong>Director:</strong>
+                                    <%= movie.director %>
+                                </span>
+                            </div>
+                            <p class="movie-description">
+                                <%= movie.description %>
+                            </p>
+
+                            <div class="movie-actions">
+                                <a href="/peliculas" class="btn secondary">← Volver a mis películas</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section copies-section shell">
+                    <header class="section-header">
+                        <h2>Mis copias de esta película</h2>
+                        <p class="section-subtitle">
+                            Tienes <%= movie.userCopies.length %>
+                                <%= movie.userCopies.length===1 ? 'copia' : 'copias' %>
+                                    de esta película
+                        </p>
+                    </header>
+
+                    <% if (movie.userCopies && movie.userCopies.length> 0) { %>
+                        <div class="copies-grid">
+                            <% movie.userCopies.forEach(function(copy, index){ %>
+                                <article class="copy-card">
+                                    <div class="copy-header">
+                                        <h3>Copia #<%= index + 1 %>
+                                        </h3>
+                                        <span class="copy-status-badge status-<%= copy.status.toLowerCase() %>">
+                                            <%= copy.status %>
+                                        </span>
+                                    </div>
+                                    <div class="copy-details">
+                                        <div class="copy-detail-item">
+                                            <span class="detail-label">Formato:</span>
+                                            <span class="detail-value">
+                                                <%= copy.format %>
+                                            </span>
+                                        </div>
+                                        <div class="copy-detail-item">
+                                            <span class="detail-label">Estado:</span>
+                                            <span class="detail-value">
+                                                <% if (copy.status==='fine' ) { %>
+                                                    ✅ En buen estado
+                                                    <% } else if (copy.status==='damaged' ) { %>
+                                                        ⚠️ Dañada
+                                                        <% } else if (copy.status==='lost' ) { %>
+                                                            ❌ Perdida
+                                                            <% } else { %>
+                                                                <%= copy.status %>
+                                                                    <% } %>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <% }) %>
+                        </div>
+                        <% } else { %>
+                            <div class="empty-state">
+                                <p class="empty-icon">📀</p>
+                                <p>No tienes copias de esta película en tu colección.</p>
+                            </div>
+                            <% } %>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

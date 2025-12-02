@@ -7,6 +7,8 @@ var {
   metrics,
   faqs,
 } = require('../data/site-content');
+var { getUserByCredentials } = require('../data/dataProvider');
+var { redirectIfAuthenticated } = require('../middleware/auth');
 
 router.get('/', function (req, res) {
   res.render('pages/home', {
@@ -25,12 +27,45 @@ router.get('/', function (req, res) {
   });
 });
 
-router.get('/login', function (req, res) {
+router.get('/login', redirectIfAuthenticated, function (req, res) {
   res.render('pages/login', {
     pageTitle: 'Iniciar sesión',
     helperText:
       'Introduce tus credenciales para revisar movimientos, registrar nuevos préstamos y actualizar fichas sin perder el contexto del club.',
     faqs,
+    error: null,
+  });
+});
+
+router.post('/login', function (req, res) {
+  const { username, password } = req.body;
+
+  // Validamos las credenciales
+  const user = getUserByCredentials(username, password);
+
+  if (user) {
+    // Guardamos el usuario en la sesión
+    req.session.user = user;
+    // Redirigimos a la página de películas
+    res.redirect('/peliculas');
+  } else {
+    // Credenciales inválidas, mostramos error
+    res.render('pages/login', {
+      pageTitle: 'Iniciar sesión',
+      helperText:
+        'Introduce tus credenciales para revisar movimientos, registrar nuevos préstamos y actualizar fichas sin perder el contexto del club.',
+      faqs,
+      error: 'Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.',
+    });
+  }
+});
+
+router.get('/logout', function (req, res) {
+  req.session.destroy(function (err) {
+    if (err) {
+      console.error('Error al destruir la sesión:', err);
+    }
+    res.redirect('/');
   });
 });
 

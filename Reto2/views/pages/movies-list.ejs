@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head', { pageTitle }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="page movies-list shell">
+                <section class="section hero-small">
+                    <div class="hero-content">
+                        <p class="eyebrow">Tu colección personal</p>
+                        <h1>Mis Películas</h1>
+                        <p class="lead">
+                            Bienvenido/a, <strong>
+                                <%= username %>
+                            </strong>. Aquí están todas las copias de tu videoteca personal.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section movies-grid shell">
+                    <% if (movies && movies.length> 0) { %>
+                        <div class="movies-container">
+                            <% movies.forEach(function(movie){ %>
+                                <article class="movie-card">
+                                    <a href="/pelicula/<%= movie.id %>" class="movie-link">
+                                        <div class="movie-poster">
+                                            <img src="<%= movie.poster %>" alt="Póster de <%= movie.title %>" />
+                                            <div class="movie-overlay">
+                                                <span class="view-details">Ver detalles →</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-info">
+                                            <h3 class="movie-title">
+                                                <%= movie.title %>
+                                            </h3>
+                                            <p class="movie-meta">
+                                                <span class="movie-year">
+                                                    <%= movie.year %>
+                                                </span>
+                                                <span class="separator">•</span>
+                                                <span class="movie-genre">
+                                                    <%= movie.genre %>
+                                                </span>
+                                            </p>
+                                            <div class="movie-copy-info">
+                                                <span class="copy-format">
+                                                    <%= movie.copyFormat %>
+                                                </span>
+                                                <span class="copy-status status-<%= movie.copyStatus.toLowerCase() %>">
+                                                    <%= movie.copyStatus %>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <% }) %>
+                        </div>
+                        <% } else { %>
+                            <div class="empty-state">
+                                <p class="empty-icon">🎬</p>
+                                <h2>No tienes películas en tu colección</h2>
+                                <p>Comienza a agregar películas para construir tu videoteca personal.</p>
+                            </div>
+                            <% } %>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
